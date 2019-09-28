@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="less_plus_greater.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <component base="greater" xOffset="-144"/>
+    <component base="less" xOffset="-2236"/>
+    <component base="plus" xOffset="-1190"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>1</real>
+    <real>0.628</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

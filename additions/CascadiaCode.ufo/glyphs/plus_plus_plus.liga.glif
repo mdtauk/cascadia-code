@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="plus_plus_plus.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="346" y="617" type="line"/>
+      <point x="346" y="803" type="line"/>
+      <point x="-539" y="803" type="line"/>
+      <point x="-539" y="617" type="line"/>
+    </contour>
+    <contour>
+      <point x="-654" y="617" type="line"/>
+      <point x="-654" y="803" type="line"/>
+      <point x="-1539" y="803" type="line"/>
+      <point x="-1539" y="617" type="line"/>
+    </contour>
+    <component base="plus" xOffset="-2220"/>
+    <component base="plus" xOffset="-180"/>
+    <component base="plus" xOffset="-1200"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>1</real>
+    <real>0.628</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

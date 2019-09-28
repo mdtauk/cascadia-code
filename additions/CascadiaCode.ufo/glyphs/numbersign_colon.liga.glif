@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="numbersign_colon.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <component base="numbersign" xOffset="-1040"/>
+    <component base="colon" xOffset="22" yOffset="180"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.845</real>
+    <real>1</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="less_slash_greater.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-834" y="246" type="line"/>
+      <point x="-1912" y="700" type="line"/>
+      <point x="-1912" y="718" type="line"/>
+      <point x="-1182" y="994" type="line"/>
+      <point x="-1182" y="1214" type="line"/>
+      <point x="-2160" y="810" type="line"/>
+      <point x="-2160" y="608" type="line"/>
+      <point x="-864" y="46" type="line"/>
+    </contour>
+    <contour>
+      <point x="960" y="608" type="line"/>
+      <point x="960" y="810" type="line"/>
+      <point x="-341" y="1362" type="line"/>
+      <point x="-341" y="1147" type="line"/>
+      <point x="702" y="718" type="line"/>
+      <point x="702" y="700" type="line"/>
+      <point x="2" y="434" type="line"/>
+      <point x="2" y="214" type="line"/>
+    </contour>
+    <component base="slash" xOffset="-1190"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>1</real>
+    <real>0.628</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

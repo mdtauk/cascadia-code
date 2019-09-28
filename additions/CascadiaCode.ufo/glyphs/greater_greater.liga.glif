@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="greater_greater.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="960" y="608" type="line"/>
+      <point x="960" y="810" type="line"/>
+      <point x="2" y="1244" type="line"/>
+      <point x="2" y="1024" type="line"/>
+      <point x="702" y="718" type="line"/>
+      <point x="702" y="700" type="line"/>
+      <point x="2" y="394" type="line"/>
+      <point x="2" y="174" type="line"/>
+    </contour>
+    <contour>
+      <point x="38" y="608" type="line"/>
+      <point x="38" y="810" type="line"/>
+      <point x="-920" y="1244" type="line"/>
+      <point x="-920" y="1024" type="line"/>
+      <point x="-220" y="718" type="line"/>
+      <point x="-220" y="700" type="line"/>
+      <point x="-920" y="394" type="line"/>
+      <point x="-920" y="174" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.845</real>
+    <real>1</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>
