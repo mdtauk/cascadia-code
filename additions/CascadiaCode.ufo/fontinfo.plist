@@ -15,7 +15,7 @@
   <key>italicAngle</key>
   <integer>0</integer>
   <key>openTypeHeadCreated</key>
-  <string>2019/09/25 22:09:26</string>
+  <string>2019/11/10 16:27:03</string>
   <key>openTypeHeadFlags</key>
   <array>
   </array>
@@ -34,7 +34,7 @@
   <key>openTypeNamePreferredSubfamilyName</key>
   <string>Regular</string>
   <key>openTypeNameVersion</key>
-  <string>Version 1909.210</string>
+  <string>Version 1910.040</string>
   <key>openTypeOS2Selection</key>
   <array>
     <integer>7</integer>
@@ -91,9 +91,9 @@
   <key>unitsPerEm</key>
   <integer>2048</integer>
   <key>versionMajor</key>
-  <integer>1909</integer>
+  <integer>1910</integer>
   <key>versionMinor</key>
-  <integer>210</integer>
+  <integer>40</integer>
   <key>xHeight</key>
   <integer>1060</integer>
 </dict>

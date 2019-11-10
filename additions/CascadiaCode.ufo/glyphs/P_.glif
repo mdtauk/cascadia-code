@@ -2,6 +2,8 @@
 <glyph name="P" format="1">
   <advance width="1200"/>
   <unicode hex="0050"/>
+    <anchor name="bottom" x="560" y="0"/>
+    <anchor name="top" x="560" y="1420"/>
   <outline>
     <contour>
       <point x="578" y="440" type="line" smooth="yes"/>
@@ -28,6 +30,12 @@
       <point x="360" y="1420" type="line"/>
       <point x="160" y="1420" type="line"/>
       <point x="160" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="560" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="560" y="1420" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

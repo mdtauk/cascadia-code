@@ -2,6 +2,8 @@
 <glyph name="R" format="1">
   <advance width="1200"/>
   <unicode hex="0052"/>
+    <anchor name="bottom" x="610" y="0"/>
+    <anchor name="top" x="560" y="1420"/>
   <outline>
     <contour>
       <point x="628" y="540" type="line" smooth="yes"/>
@@ -34,6 +36,12 @@
       <point x="804" y="668" type="line"/>
       <point x="582" y="668" type="line"/>
       <point x="900" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="610" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="560" y="1420" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

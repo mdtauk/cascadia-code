@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="acutecomb.case.loclPLK" format="1">
+  <advance width="1200"/>
+    <anchor name="_top" x="600" y="1420"/>
+  <outline>
+    <contour>
+      <point x="791" y="1840" type="line"/>
+      <point x="549" y="1840" type="line"/>
+      <point x="519" y="1540" type="line"/>
+      <point x="701" y="1540" type="line"/>
+    </contour>
+    <contour>
+      <point x="600" y="1420" type="move" name="_top"/>
+    </contour>
+  </outline>
+</glyph>

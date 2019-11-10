@@ -11,4 +11,10 @@
     </contour>
     <component base="S"/>
   </outline>
+  <lib>
+  <dict>
+    <key>lsb</key>
+S    <key>rsb</key>
+S  </dict>
+  </lib>
 </glyph>

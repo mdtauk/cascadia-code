@@ -1,10 +1,32 @@
 @ClosingBracket = [bracketright braceright parenright];
 @Digit = [zero one two three four five six seven eight nine];
 @HexDigit = [@Digit a b c d e f A B C D E F];
-@Lowercase = [a b c d e f g h i j k l m n o p q r s t u v w x y z x.multiply];
+@Lowercase = [a b c d e f g h i j k l m n o p q r s t u v w x y z x.multiply aacute abreve acircumflex adieresis adotbelow agrave amacron aogonek aring aringacute atilde ae aeacute cacute ccaron ccedilla ccircumflex cdotaccent eth dcaron dcroat eacute ebreve ecaron ecircumflex edieresis edotaccent edotbelow egrave emacron eogonek etilde schwa gbreve gcaron gcircumflex gcommaaccent gdotaccent hbar hcircumflex idotless iacute ibreve icircumflex idieresis idotbelow igrave ij imacron iogonek itilde jdotless jcircumflex kcommaaccent kgreenlandic lacute lcaron lcommaaccent ldot lslash nacute napostrophe ncaron ncommaaccent eng nhookleft ntilde oacute obreve ocircumflex odieresis odotbelow ograve ohungarumlaut omacron oogonek oslash oslashacute otilde oe thorn racute rcaron rcommaaccent sacute scaron scedilla scircumflex scommaaccent germandbls tbar tcaron tcedilla tcommaaccent uacute ubreve ucircumflex udieresis udotbelow ugrave uhungarumlaut umacron uogonek uring utilde wacute wcircumflex wdieresis wgrave yacute ycircumflex ydieresis ygrave ymacron ytilde zacute zcaron zdotaccent iacute_j.loclNLD];
 @OpeningBracket = [bracketleft braceleft parenleft];
 @Tall = [@Uppercase @Digit @OpeningBracket @ClosingBracket bar];
-@Uppercase = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z];
+@Uppercase = [A Aacute Abreve Acircumflex Adieresis Adotbelow Agrave Amacron Aogonek Aring Aringacute Atilde AE AEacute B C Cacute Ccaron Ccedilla Ccircumflex Cdotaccent D Eth Dcaron Dcroat E Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Edotbelow Egrave Emacron Eogonek Etilde F G Gbreve Gcaron Gcircumflex Gcommaaccent Gdotaccent H Hbar Hcircumflex I IJ Iacute Ibreve Icircumflex Idieresis Idotaccent Idotbelow Igrave Imacron Iogonek Itilde J Jcircumflex K Kcommaaccent L Lacute Lcaron Lcommaaccent Ldot Lslash M N Nacute Ncaron Ncommaaccent Eng Nhookleft Ntilde O Oacute Obreve Ocircumflex Odieresis Odotbelow Ograve Ohungarumlaut Omacron Oogonek Oslash Oslashacute Otilde OE P Thorn Q R Racute Rcaron Rcommaaccent S Sacute Scaron Scedilla Scircumflex Scommaaccent Germandbls Schwa T Tbar Tcaron Tcedilla Tcommaaccent U Uacute Ubreve Ucircumflex Udieresis Udotbelow Ugrave Uhungarumlaut Umacron Uogonek Uring Utilde V W Wacute Wcircumflex Wdieresis Wgrave X Y Yacute Ycircumflex Ydieresis Ygrave Ymacron Ytilde Z Zacute Zcaron Zdotaccent Iacute_J.loclNLD Cacute.loclPLK Nacute.loclPLK Oacute.loclPLK Sacute.loclPLK Zacute.loclPLK];
+languagesystem DFLT dflt;
+
+languagesystem latn dflt;
+languagesystem latn ROM;
+languagesystem latn PLK;
+languagesystem latn MOL;
+languagesystem latn NLD;
+languagesystem latn CAT;
+
+feature aalt {
+feature calt;
+feature locl;
+feature case;
+feature salt;
+feature ss01;
+feature ss02;
+feature ss03;
+feature ordn;
+feature sups;
+feature frac;
+
+} aalt;
 feature calt {
 ### start of generated calt
 lookup less_equal_equal_greater {
@@ -1013,53 +1035,119 @@ lookup asterisk_asterisk {
 ### end of generated calt
 
 sub less asciitilde' greater by asciitilde_asciitilde.liga;
-
-lookup lowercase_hyphen {
-  ignore sub @Tall \yphen' @Lowercase;
-  ignore sub @Lowercase \yphen' @Tall;  
-  sub \yphen' @Lowercase by \yphen.lc;
-  sub @Lowercase \yphen' by \yphen.lc;
-} lowercase_hyphen;
-
-lookup lowercase_endash {
-  ignore sub @Tall \ndash' @Lowercase;
-  ignore sub @Lowercase \ndash' @Tall;  
-  sub \ndash' @Lowercase by \ndash.lc;
-  sub @Lowercase \ndash' by \ndash.lc;
-} lowercase_endash;
-
-lookup lowercase_emdash {
-  ignore sub @Tall \mdash' @Lowercase;
-  ignore sub @Lowercase \mdash' @Tall;  
-  sub \mdash' @Lowercase by \mdash.lc;
-  sub @Lowercase \mdash' by \mdash.lc;
-} lowercase_emdash;
-
-lookup lowercase_plus {
-  ignore sub @Tall \lus' @Lowercase;
-  ignore sub @Lowercase \lus' @Tall;
-  sub \lus' @Lowercase by \lus.lc;
-  sub @Lowercase \lus' by \lus.lc;
-} lowercase_plus;
-
-lookup lowercase_asterisk {
-  ignore sub @Tall \sterisk' @Lowercase;
-  ignore sub @Lowercase \sterisk' @Tall;
-  sub \sterisk' @Lowercase by \sterisk.lc;
-  sub @Lowercase \sterisk' by \sterisk.lc;
-} lowercase_asterisk;
-
-lookup uppercase_colon {
-  ignore sub @Tall \olon' @Lowercase;
-  ignore sub @Lowercase \olon' @Tall;
-  sub @Tall \olon' by \olon.uc;
-  sub \olon' @Tall by \olon.uc;
-} uppercase_colon;
-
+sub dcaron' [lacute lcaron lcommaaccent ldot lslash b h k l hbar hcircumflex kcommaaccent @Uppercase] by dcaron.alt;
 sub \ero \' @HexDigit by \.multiply;
 sub @Digit \' @Digit by \.multiply;
 } calt;
+feature case {
+sub dieresiscomb by dieresiscomb.case;
+sub dotaccentcomb by dotaccentcomb.case;
+sub gravecomb by gravecomb.case;
+sub acutecomb by acutecomb.case;
+sub hungarumlautcomb by hungarumlautcomb.case;
+sub circumflexcomb by circumflexcomb.case;
+sub caroncomb by caroncomb.case;
+sub brevecomb by brevecomb.case;
+sub ringcomb by ringcomb.case;
+sub tildecomb by tildecomb.case;
+sub macroncomb by macroncomb.case;
+
+} case;
+feature ccmp {
+lookup ccmp_Other_1 {
+	@CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb];
+	@CombiningNonTopAccents = [cedillacomb dotbelowcomb ogonekcomb];
+	sub [i j]' @CombiningTopAccents by [idotless jdotless];
+	sub [i j]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless];
+	@Markscomb = [dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb];
+	@MarkscombCase = [dieresiscomb.case dotaccentcomb.case gravecomb.case acutecomb.case hungarumlautcomb.case circumflexcomb.case caroncomb.case brevecomb.case ringcomb.case tildecomb.case macroncomb.case];
+	sub @Markscomb @Markscomb' by @MarkscombCase;
+	sub @Uppercase @Markscomb' by @MarkscombCase;
+} ccmp_Other_1;
+
+lookup ccmp_Other_2 {
+	sub @Markscomb' @MarkscombCase by @MarkscombCase;
+	sub @MarkscombCase @Markscomb' by @MarkscombCase;
+} ccmp_Other_2;
+
+} ccmp;
+feature frac {
+sub one slash four by onequarter;
+sub one slash two by onehalf;
+sub three slash four by threequarters;
+
+} frac;
+feature liga {
+
+
+} liga;
+feature locl {
+lookup locl_latn_0 {
+	script latn;
+	language ROM;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+	language PLK;
+	sub Cacute by Cacute.loclPLK;
+	sub Nacute by Nacute.loclPLK;
+	sub Oacute by Oacute.loclPLK;
+	sub Sacute by Sacute.loclPLK;
+	sub Zacute by Zacute.loclPLK;
+	sub cacute by cacute.loclPLK;
+	sub nacute by nacute.loclPLK;
+	sub oacute by oacute.loclPLK;
+	sub sacute by sacute.loclPLK;
+	sub zacute by zacute.loclPLK;
+	sub acutecomb by acutecomb.loclPLK;
+	language MOL;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+} locl_latn_0;
+
+lookup locl_latn_1 {
+	script latn;
+	language NLD;
+	sub iacute j by iacute_j.loclNLD;
+	sub Iacute J by Iacute_J.loclNLD;
+} locl_latn_1;
+
+lookup locl_latn_2 {
+	script latn;
+	language CAT;
+	sub  l' periodcentered' l by ldot;
+	sub  L' periodcentered' L by Ldot;
+} locl_latn_2;
+
+} locl;
+feature ordn {
+sub [zero one two three four five six seven eight nine] [A a]' by ordfeminine;
+sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
+
+} ordn;
+feature salt {
+sub zero by zero.ss01;
+
+} salt;
 feature ss01 {
 sub zero by zero.ss01;
 
 } ss01;
+feature ss02 {
+sub asciitilde_equal.liga by exclam_equal.liga;
+
+} ss02;
+feature ss03 {
+sub LIG less_hyphen.liga by less_hyphen.liga;
+sub less_hyphen.liga by less hyphen;
+} ss03;
+feature sups {
+sub one by onesuperior;
+sub two by twosuperior;
+sub three by threesuperior;
+sub four by foursuperior;
+
+} sups;

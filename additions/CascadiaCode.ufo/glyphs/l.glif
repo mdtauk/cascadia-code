@@ -2,6 +2,10 @@
 <glyph name="l" format="1">
   <advance width="1200"/>
   <unicode hex="006C"/>
+    <anchor name="bottom" x="670" y="0"/>
+    <anchor name="center" x="510" y="784"/>
+    <anchor name="top" x="506" y="1500"/>
+    <anchor name="topright" x="960" y="1500"/>
   <outline>
     <contour>
       <point x="748" y="-20" type="curve" smooth="yes"/>
@@ -26,6 +30,18 @@
       <point x="418" y="1500" type="line"/>
       <point x="88" y="1500" type="line"/>
       <point x="88" y="1324" type="line"/>
+    </contour>
+    <contour>
+      <point x="670" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="510" y="784" type="move" name="center"/>
+    </contour>
+    <contour>
+      <point x="506" y="1500" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="960" y="1500" type="move" name="topright"/>
     </contour>
   </outline>
 </glyph>

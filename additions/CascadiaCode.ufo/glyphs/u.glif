@@ -2,6 +2,10 @@
 <glyph name="u" format="1">
   <advance width="1200"/>
   <unicode hex="0075"/>
+    <anchor name="bottom" x="570" y="0"/>
+    <anchor name="ogonek" x="1080" y="10"/>
+    <anchor name="top" x="590" y="1060"/>
+    <anchor name="topright" x="1120" y="1060"/>
   <outline>
     <contour>
       <point x="526" y="-20" type="curve" smooth="yes"/>
@@ -36,6 +40,18 @@
       <point x="1012" y="1080" type="line"/>
       <point x="800" y="1080" type="line"/>
       <point x="800" y="300" type="line"/>
+    </contour>
+    <contour>
+      <point x="570" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1080" y="10" type="move" name="ogonek"/>
+    </contour>
+    <contour>
+      <point x="590" y="1060" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1120" y="1060" type="move" name="topright"/>
     </contour>
   </outline>
 </glyph>
