@@ -1,89 +1,81 @@
-![Cascadia Code](/images/cascadia-code.png)
+![Cascadia Code](images/cascadia-code.png)
 
-![Cascadia Code Characters](/images/cascadia-code-characters.png)
+# About Cascadia Code
+Cascadia is a fun new coding font that comes bundled with [Windows Terminal](https://github.com/microsoft/terminal), and is now the default font in Visual Studio as well. 
 
-# Welcome!
+# Font Variants
+-  `Cascadia Code`: standard version of Cascadia
+-  `Cascadia Mono`: a version of Cascadia that doesn't have ligatures
+-  `Cascadia (Code|Mono) PL`: a version of Cascadia that has embedded Powerline symbols
 
-This repository contains the source code of Cascadia Code.
+For the italic, there is a standard `italic` and a `cursive` variant accessible via `ss01` (see [below](https://github.com/microsoft/cascadia-code/blob/main/README.md#to-enable-the-cursive-form-of-the-italic-heres-the-code-you-should-use)). 
 
-Other related repositories include:
+# Font features
+![Coding Ligatures](images/ligatures.png)
 
-- [Windows Terminal](https://github.com/microsoft/terminal)
+![Arrow Support](images/arrow_support.png)
+
+![Stylistic Sets](images/stylistic_set.png)
+
+Enabling stylistic sets will [vary between applications](https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets). For example, in VS Code, you can enable stylistic sets (and other OpenType features) via `settings.json`:
+
+```
+"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'"
+```
+
+#### To enable the Cursive form of the italic, here's the code you should use:
+```
+"editor.fontLigatures": "'calt', 'ss01'",
+```
+If you're using an environment that does not support the `ss01` OT feature, one option to consider is [opentype-feature-freezer](https://github.com/twardoch/fonttools-opentype-feature-freezer/).
+
+# Character Sets
+![Cascadia Code](images/cascadia-code-characters.png)
+![Cascadia Code Italic](images/cascadia-code-italic-characters.png)
 
 # Installation
 
-**You can install the latest version of Cascadia Code from the releases page here:** https://github.com/microsoft/cascadia-code/releases
+**You can download the latest version of Cascadia Code from the releases page here:** [https://github.com/microsoft/cascadia-code/releases](https://github.com/microsoft/cascadia-code/releases)
 
-Clicking on the Cascadia.ttf file will download it to your machine. From there, open the file. This will open a new window displaying the characters included in the font along with the font displayed at different sizes. This window should have an "Install" button that will install the font on your machine when clicked.
+##### Font formats:
 
-👉 **Note:** If you have previously installed a version of Cascadia Code, installing a new version *should* overwrite the previous version. However, in order to ensure it is completely overwritten, it is recommended that you delete the previous version you had before installing another.
+- `ttf variable`: we recommend this version for **all users,** and particularly those on Windows or any other OS that employs TrueType hinting. It offers the greatest diversity of weight options (anything from 200-700).
+- `ttf static`: in the rare situation where the above variable font version is not supported, or a singular weight is preferred to the entire range, static formats are supplied. However, please note they do not have the same degree of hinting quality as the variable font versions.
+- `otf static`: for users who prefer OTF format fonts, otf static instances are provided. At this time we do not have a variable font OTF version. 
+- `WOFF2`: These versions are provided for the purposes of web use, and are available both as variable fonts, and static instances. 
 
-# Contributing
+Once unzipped, right-click the font file and click `Install for all users`. This will install the font onto your machine. 
 
-This project welcomes contributions and suggestions. Most contributions require you to
-agree to a Contributor License Agreement (CLA) declaring that you have the right to,
-and actually do, grant us the rights to use your contribution. For details, visit
-https://cla.microsoft.com.
+👉 **Note:** If you have previously installed a version of Cascadia Code, please uninstall the previous version *prior* to installing a new version. Not doing so can result in improper rendering. 
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need
-to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the
-instructions provided by the bot. You will only need to do this once across all repositories using our CLA.
+For more details and app-specific instructions, [please check the wiki](https://github.com/microsoft/cascadia-code/wiki/Installing-Cascadia-Code). 
 
-# Getting Started
+# Get involved
+Instructions on how to modify and submit an update to the Cascadia Code source is [available in the wiki](https://github.com/microsoft/cascadia-code/wiki/Modifying-Cascadia-Code).
 
-## Modifying the Font
 
-Making modifications to the Cascadia Code font requires use, and understanding, of [Glyphs](https://glyphsapp.com/) (Mac) as well as [Microsoft VTT](https://docs.microsoft.com/en-us/typography/tools/vtt/) (Windows) and to a lesser extent [FontTools](https://github.com/fonttools/fonttools). The source for the font is built in Glyphs, and can be modified to a user’s preference. However, please note that hinting built into the font is closely tied to the glyph order and point order—modifications to either will result in needing to manually correct any problems. 
+# Communicating with the Team
 
-### Modifying a single glyph
-
-1) Make the necessary changes in the Glyphs source and export a TTF file. 
-2) Open the previous VTT TTF source file in VTT and locate the code point that you changed in the source. 
-3) Import the glyph and overwrite the code point in the source file. If it is to be added to the end of the file, on the import screen choose “append to end of font”.
-4) Hint (or re-hint) the glyph. 
-5) Ship the production font. 
-
-### Modifying a broad range of glyphs
-
-1) Make the necessary modifications to the Glyphs source and export a TTF file. 
-2) Convert both the new TTF and the VTT TTF source file to TTX using FontTools
-3) Copy the TSI tables from the VTT TTF source to the new TTF source, and rebuild the TTF file. 
-4) Open new TTF file in VTT, compile and check for errors. Correct as necessary. 
-5) Ship the production font. 
-
-In cases of extensive glyph modification, the font may need to be re-hinted entirely.
-
-## Creating a Pull Request
-
-At the moment, we do not have a testing framework for verifying proper character creation. When creating a pull request, please heavily document the steps you took along with images displaying your changes. Additionally, please provide images of the updated character(s) at different screen sizes to validate proper hinting.
-
-## Communicating with the Team
-
-The easiest way to communicate with the team is via GitHub issues. Please file new issues, feature requests and suggestions, but **DO search for similar open/closed pre-existing issues before you do**.
+The easiest way to communicate with the team is via GitHub Issues. Please file new issues, feature requests and suggestions, but **DO search for similar open/closed pre-existing issues before you do**.
 
 Please help us keep this repository clean, inclusive, and fun! We will not tolerate any abusive, rude, disrespectful or inappropriate behavior. Read our [Code of Conduct](https://opensource.microsoft.com/codeofconduct/) for more details.
 
 If you would like to ask a question that you feel doesn't warrant an issue (yet), please reach out to us via Twitter:
 
+Aaron Bell, Font Designer: [@aaronbell](https://twitter.com/aaronbell)
+
 Kayla Cinnamon, Program Manager: [@cinnamon_msft](https://twitter.com/cinnamon_msft)
-
-Dustin Howett, Engineering Lead: [@dhowett](https://twitter.com/dhowett)
-
-Michael Niksa, Senior Developer: [@michaelniksa](https://twitter.com/michaelniksa)
 
 Rich Turner, Program Manager: [@richturn_ms](https://twitter.com/richturn_ms)
 
-# Installing Cascadia Code in VS Code
-
-1. Go to `File > Preferences` or hit `Ctrl + ,` in VS Code.
-2. Enter "Font Face" in search field.
-3. Enter following in Font Face option: `'Cascadia Code', Consolas, 'Courier New', monospace`.
-4. Enable `Font Ligatures` option available just below 'Font Face'.
-5. Press `Enter` and you're good to go.
-
-> Note: If you've installed font and it does not get applied in VS Code, try restarting VS Code.
-
-![VS Code Settings](images/vscode-ligature-settings.png "VS Code Ligatures Setting")
+_Special thanks_ to:
+- Fira Code – OpenType code for the coding ligatures – [github](https://github.com/tonsky/FiraCode)
+- Nerd Fonts – Centralizing app iconography – [github](https://github.com/ryanoasis/nerd-fonts)
+- Viktoriya Grabowska – Designer of Cyrillic Italic and Consultant – [@vika_grabowska](https://twitter.com/vika_grabowska)
+- Mohamad Dakak - Arabic designer - [@mohamaddakak](https://twitter.com/mohamaddakak)
+- Liron Lavi Turkenich - Hebrew designer - [@LironLaviTur](https://twitter.com/LironLaviTur)
+- Gerry Leonidas – Greek Consultant – [@gerryleonidas](https://twitter.com/gerryleonidas)
+- Donny Trương – Vietnamese Consultant – [Vietnamese Typography](https://vietnamesetypography.com)
 
 # Code of Conduct
 
